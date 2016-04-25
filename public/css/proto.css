@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+*
+{
+	margin: 0;
+	padding: 0;
+	outline: none;
+	border: none;
+	list-style: none;
+}
+
+html, body
+{
+	width: 100%;
+	height: 100%;
+}
+
+#display
+{
+	width: 100%;
+	height: 100%;
+
+	margin: auto;
+
+	background: #67161C;
+
+	overflow: hidden;
+}
+
+.fill
+{
+	position: absolute;
+	left: 0; right: 0; top: 0; bottom: 0;
+}
+
+.tween
+{
+	backface-visibility: none;
+}
+
+.sky
+{
+	width: inherit;
+	height: inherit;
+
+	margin: auto;
+
+	transform-origin: 50% 50%;
+	animation: skyFrames 6s ease-in-out infinite;
+
+	-webkit-filter: blur(2px);
+	filter: blur(2px);
+}
+
+@keyframes skyFrames
+{
+	0%		{transform: rotate(10deg);}
+	50%		{transform: rotate(-10deg);}
+	100%	{transform: rotate(10deg);}
+}
+
+.lib
+{
+	width: 0;
+	height: 0;
+	position: absolute;
+	visibility: hidden;
+	overflow: hidden;
+}
+
+.snow-container
+{
+	position: absolute;
+	transform-origin: 50% 50%;
+}
+
+.snow
+{
+	width: inherit;
+	height: inherit;
+	position: relative;
+	background: rgb(250, 250, 255);
+
+	border-radius: 100%;
+
+	transform-origin: 50% 50%;
+
+	transition-property: transform;
+	transition-timing-function: ease-in-out;
+}
+
+.bg
+{
+	width: 100%;
+	height: 100%;
+
+	margin: auto;
+
+	background-image: url(../img/bg.jpeg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	transform-origin: 50% 50%;
+	animation: bgFrames 3500ms ease-in-out infinite;
+}
+
+@keyframes bgFrames
+{
+	0%		{transform: scale(1);}
+	50%		{transform: scale(1.02);}
+	100%	{transform: scale(1);}
+}
+
+.grad
+{
+	width: 100%;
+	height: 100%;
+
+	margin: auto;
+
+	background: radial-gradient(ellipse at center, rgba(250, 250, 255, 0) 40%, rgba(250, 250, 255, 0.9) 100%);
+}
