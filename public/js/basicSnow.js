@@ -31,7 +31,7 @@ Flake.prototype.build = function(n)
 	this.positioning.x 	= Math.round(Math.random() * viewer.w);
 	this.positioning.y = Math.round(Math.random() * ((viewer.h - 10) - 10) + 10);
 
-	this.duration = Math.round(Math.random() * (12000 - 4000) + 4000);
+	this.duration = Math.round(Math.random() * (18000 - 6000) + 6000);
 };
 
 Flake.prototype.reference = function ()
