@@ -40,16 +40,16 @@ html, body
 
 .sky
 {
-	width: inherit;
-	height: inherit;
+	width: 100%;
+	height: 100%;
 
 	margin: auto;
 
 	transform-origin: 50% 50%;
-	animation: skyFrames 6s ease-in-out infinite;
+/* 	animation: skyFrames 6s ease-in-out infinite;
 
 	-webkit-filter: blur(2px);
-	filter: blur(2px);
+	filter: blur(2px); */
 }
 
 @keyframes skyFrames
@@ -68,25 +68,45 @@ html, body
 	overflow: hidden;
 }
 
-.snow-container
+.snow-main
 {
 	position: absolute;
+	left: 0; top: 0; bottom: 0;
 	transform-origin: 50% 50%;
+
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.snow-container
+{
+	width: inherit;
+	height: inherit;
+
+	position: absolute;
+	left: 0; top: 0; bottom: 0;
+	transform-origin: 50% 50%;
+
+	animation-name: snowFrames;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
 }
 
 .snow
 {
 	width: inherit;
-	height: inherit;
 	position: relative;
 	background: rgb(250, 250, 255);
 
 	border-radius: 100%;
 
 	transform-origin: 50% 50%;
+}
 
-	transition-property: transform;
-	transition-timing-function: ease-in-out;
+@keyframes snowFrames
+{
+	0%		{transform: translateY(-100%);}
+	100%	{transform: translateY(200%);}
 }
 
 .bg

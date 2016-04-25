@@ -5,7 +5,6 @@ var display;
 var sky;
 var lib;
 var timer;
-var eventList;
 
 var fx;
 
